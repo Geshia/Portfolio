@@ -1,0 +1,518 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color:white;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    background-color: #080808;
+}
+.front_page{
+    background-color:#000;
+    height:120vh;
+    width:100%;
+    /* background-image: url('main_image.jpg');
+    background-repeat: no-repeat;
+    background-position:90%;
+    background-size: 23%; */
+    border-radius: 50%;
+}
+.row{
+    width:85%;
+    margin:0 auto;
+}
+.title{
+    color:white;
+    font-weight: bold;
+    font-size:40px;
+}
+.title span{
+    color:rgb(255, 0, 100);
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+}
+.nav_menu{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+.nav_menu li a{
+    font-size: 17px;
+    position:relative;
+}
+.nav_menu li a::after{
+    content: '';
+    width:0;
+    height:3px;
+    background:rgb(255, 0, 100);
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    transition:0.5s;
+}
+.nav_menu li a:hover::after{
+    width:100%;
+}
+.hamburger{
+    display: none;
+}
+/* ===========================================Hero SEction-===================================== */
+.hero{
+    padding-top: 150px;
+}
+.main_text{
+    color:white;
+    line-height: 1.5;
+    font-size: 30px;
+}
+.main_text h2 span{
+    color:rgb(255, 0, 100);
+}
+.main{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.main img{
+    width:35%;
+    height:280px;
+    border-radius: 0 50% 50% 0;
+}
+/* ========================================About me================================================= */
+/* .bg-color{
+    background-color: black;
+} */
+.about_flex{
+    padding-top: 100px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+}
+.about_col2{
+    width:100%;
+    color:white;
+}
+.about_col2 h1{
+    font-size:65px;
+    font-weight: 600px;
+    padding-bottom: 15px;
+}
+.about_col1{
+    width:90%;
+    height:100%;
+}
+.about_col1 img{
+    width:100%;
+    height:100%;
+    border-radius:15px;
+}
+.about_col2_tabs{
+    display:flex;
+    gap:15px;
+    color:white;
+    margin:15px 0 35px;
+}
+.about_col2_tabs_links{
+    margin-right:40px;
+    font-size:16px;
+    font-weight: 500;
+    cursor:pointer;
+    position:relative
+}
+.about_col2_tabs_links::after{
+    content:'';
+    width:0;
+    height:3px;
+    background:rgb(255, 0, 100);
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    transition: 0.5s;
+}
+.about_col2_tabs li:hover::after{
+    width:50%;
+}
+.sub_about_col2_links ul li{
+    margin:10px 0;
+}
+.sub_about_col2_links ul li span{
+    color:#b54769;
+}
+/* .sub_about_col2_links{
+    display:none;
+} */
+.sub_about_col2_links.active-tab{
+    display:block;
+}
+/* ======================================Services========================================================== */
+.card{
+    padding:15px;
+}
+.services{
+    padding-top: 80px;
+}
+.services_flex{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    color:white;
+    gap:20px;
+}
+.services>h1{
+    font-size:35px;
+    padding-bottom: 40px;
+}
+.card{
+    background-color: rgb(28, 26, 26);
+    padding: 25px;
+    border-radius: 5px;
+    line-height: 1.2;
+    height: 300px;
+    transition:transform 0.5s, background 0.5s;
+}
+.card h1{
+    font-size:30px;
+}
+.card p{
+    padding-bottom: 30px;
+}
+.card:hover{
+    background:#ff004f;
+    transform: translateY(-10px)
+}
+.fa-solid{
+    font-size:30px;
+    padding-bottom: 5px;
+}
+.card h1{
+    padding:15px 0;
+}
+/* ======================================================my work============================================== */
+.work{
+    padding-top: 90px;
+}
+.work>h1{
+    font-size: 35px;
+    padding-bottom: 30px;
+}
+.work_flex{
+    padding-top: 25px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:40px;
+}
+.work_image{
+    width: 100%;
+    height:300px;
+    position:relative;
+    overflow:hidden;
+    border-radius: 5px;
+}
+.work_image img{
+    width:100%;
+    height: 100%;
+    display:block;
+    transition: 0.5s;
+}
+.work_btn_cont{
+    padding:30px 0;
+    display: flex;
+    justify-content: center;
+}
+.work_btn_cont a{
+    padding:5px 30px;
+    border:1px solid rgba(250, 128, 114, 0.312);
+    border-radius: 5px;
+}
+.layer{
+    width:100%;
+    height:0;
+    font-size: 15px;
+    background:linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    position:absolute;
+    left:0;
+    bottom:0;
+    overflow:hidden;
+    border-radius:5px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:0 40px;
+    text-align:center;
+    transition: 0.5s;
+}
+.layer p{
+    padding-bottom: 20px;
+}
+.work_image:hover img{
+    transform: scale(1.1);
+}
+.work_image:hover .layer{
+    height: 100%;
+}
+.fa-external-link-alt{
+    font-size: 30px;
+    padding-top: 20px;
+}
+.fa-external-link-alt:hover{
+    border-radius: 50px;
+    color:#ff004f;
+    padding:10px 10px 10px;
+    border:1px solid black;
+    background-color: white;
+}
+/* =============================================================Contact Me========================================================= */
+.contact_flex{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+}
+.contact{
+    padding-top: 50px;
+}
+.contact_info{
+    width:100%;
+    /* line-height: 2; */
+}
+.information{
+    line-height: 2.2;
+    padding-bottom: 10px;
+}
+.fav_social_icons{
+    padding-bottom: 10px;
+}
+.contact_info>h1{
+    font-size:40px;
+    padding-bottom: 10px;
+}
+.form_flex{
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+    width:100%;
+}
+input, textarea{
+    width:100%;
+    padding:10px;
+    background-color:rgb(34, 33, 33);
+    outline: none;
+    border:0;
+    border-radius:5px;
+}
+.form_btn{
+    padding-top:10px;
+}
+.form_btn a{
+    background:rgba(255, 0, 100);
+    padding:10px 40px;
+    border-radius:5px;
+    font-size:15px;
+    text-align: center;
+}
+.contact_btn_container{
+    padding-top:15px;
+}
+.contact_btn_container a{
+    background:rgba(255, 0, 100);
+    padding:10px 40px;
+    border-radius:5px;
+    font-size:15px;
+    text-align: center;
+}
+.fab{
+    padding-right: 10px;
+    font-size: 20px;
+}
+.information .fas{
+    margin:10px 10px 10px 0;
+    background: rgba(255, 0, 100);
+    padding:8px;
+    border-radius: 10px 0 10px;
+}
+/* =========================================footer================================ */
+.footer_content{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    margin-top: 40px;
+    background-color:rgb(34, 33, 33);
+}
+.footer_content p{
+    padding: 10px;
+}
+.fa-heart{
+    font-size: 15px;
+    color:rgba(255, 0, 100);
+    padding:0 5px;
+}
+/* ======================================================media QUErY=================================================================== */
+@media(max-width:930px){
+    .front_page{
+        background-position:80%;
+        background-size: 25%;
+    }
+    .row{
+        width:85%;
+        margin:0 auto;
+    }
+}
+
+@media(max-width:768px){
+    .front_page{
+        background-position:90%;
+        background-size: 25%;
+    }
+    .title_flex{
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .title{
+        font-size:35px;
+    }
+    .hamburger{
+        display: block;
+    }
+    .fa-bars{
+        font-size:30px !important;
+    }
+    .row{
+        width:85%;
+        margin:0 auto;
+    }
+
+    .nav_menu{
+        display: none;
+    }
+    /* ===========================================Hero SEction-===================================== */
+    .main_text{
+        color:white;
+        line-height: 1.3;
+        font-size: 20px;
+    }
+    /* ========================================About me================================================= */
+    .about_col2 h1{
+        font-size:50px;
+    }
+    .about_col2_tabs_links{
+        font-size:12px;
+    }
+    /* ======================================Services========================================================== */
+    .services>h1{
+        font-size:30px;
+        padding-bottom: 40px;
+    }
+    .card{
+        height: 250px;
+    }
+    .card h1{
+        font-size:25px;
+    }
+    .fa-solid{
+        font-size:25px;
+    }
+    /* ======================================================my work============================================== */
+    .work>h1{
+        font-size: 30px;
+        padding-bottom: 30px;
+    }
+    /* =============================================================Contact Me========================================================= */
+    .contact_info>h1{
+        font-size:30px;
+    }
+
+    .form_btn a{
+        padding:5px 30px;
+    }
+    .contact_btn_container{
+        padding-top:15px;
+    }
+    .contact_btn_container a{
+        padding:5px 2px;
+    }
+}
+@media(max-width:550px){
+    .front_page{
+        background-image: none;
+    }
+    .hero{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav_menu{
+        display:none;
+    }
+    .main_text{
+        font-size: 20px !important;
+        line-height: 2 !important;
+    }
+
+
+    .about_col2>h1{
+        font-size: 20px !important;
+    }
+    .about_col2 p{
+        font-size: 15px;
+    }
+
+    .front_page{
+        
+        background-position:right;
+        background-size: 40%;
+    }
+    .row{
+        width:85%;
+        margin:0 auto;
+    }
+
+    .title{
+        font-size:30px;
+    }
+    .nav_menu li a{
+        font-size: 10px;
+    }
+    /* ===========================================Hero SEction-===================================== */
+    .main_text{
+        color:white;
+        line-height: 1.2;
+        font-size: 15px;
+    }
+    /* ========================================About me================================================= */
+    .about_col2_tabs_links{
+        font-size:12px;
+    }
+    /* ======================================Services========================================================== */
+    .services>h1{
+        font-size:25px;
+        padding-bottom: 35px;
+    }
+    .card{
+        height: 240px;
+    }
+    .card h1{
+        font-size:20px;
+    }
+    .fa-solid{
+        font-size:20px;
+    }
+    /* ======================================================my work============================================== */
+    .work>h1{
+        font-size:25px;
+        padding-bottom: 30px;
+    }
+    /* =============================================================Contact Me========================================================= */
+    .contact_info>h1{
+        font-size:25px;
+    }
+
+}
